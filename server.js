@@ -62,6 +62,7 @@ const app = http.createServer((req, res) => {
           new Date().getTime().toString() + Math.floor(Math.random() * 100000)
         ),
         ...data,
+        finished: false 
       });
       res.end();
     });
@@ -102,11 +103,13 @@ const app = http.createServer((req, res) => {
       let taskIndex = todos.todos[foundId];
       // let taskDone = todos.todos[]
 
-      console.log(data);
+      console.log(`Finished?: ${data.finished} Id: ${data.id}`);
       if (data.task) {
         taskIndex.task = data.task;
       } else if (data.finished) {
         taskIndex.finished = data.finished;
+      } else if (!data.finished) {
+        taskIndex.finished = !data.finished;
       } else {
         res.statusCode = 400;
       }
