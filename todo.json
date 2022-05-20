@@ -1,0 +1,22 @@
+{ "todos": [
+    {
+        "id": 1,
+        "task": "rensa kattlådor",
+        "finished": false
+    },
+    {
+        "id": 2,
+        "task": "dammsuga",
+        "finished": true
+    },
+    {
+        "id": 3,
+        "task": "diska",
+        "finished": false
+    },
+    {
+        "id": 4,
+        "task": "damma",
+        "finished": false
+    }
+]}
