@@ -108,9 +108,11 @@ const app = http.createServer((req, res) => {
         taskIndex.task = data.task;
       } else if (data.finished) {
         taskIndex.finished = data.finished;
-      } else if (!data.finished) {
-        taskIndex.finished = !data.finished;
-      } else {
+      } 
+      else if (!data.finished) {
+        taskIndex.finished = data.finished;
+      } 
+      else {
         res.statusCode = 400;
       }
     });
