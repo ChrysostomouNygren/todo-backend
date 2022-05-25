@@ -13,7 +13,7 @@ This is a vanilla node backend server, no database.
 
 ### Get single todo:
 
-> `fetch('https://localhost:4000/todos/1')`\
+> `fetch('https://localhost:4000/todos/:id')`\
 > ` .then(res=>res.json())`\
 > ` .then(json=>console.log(json));`
 
@@ -31,7 +31,7 @@ This is a vanilla node backend server, no database.
 
 ### Edit todo:
 
-> `fetch("http://localhost:4000/todos/1", {`\
+> `fetch("http://localhost:4000/todos/:id", {`\
 > `method: "PUT",`\
 > `body: JSON.stringify(`\
 > `{`\
@@ -45,7 +45,7 @@ This is a vanilla node backend server, no database.
 
 ### Edit finished:
 
-> `fetch("http://localhost:4000/todos/1", {`\
+> `fetch("http://localhost:4000/todos/:id", {`\
 > `method: "PATCH",`\
 > `body: JSON.stringify(`\
 > `{`\
@@ -57,6 +57,6 @@ This is a vanilla node backend server, no database.
 
 ### Delete todo:
 
-> `fetch("http://localhost:4000/todos/4", {`\
+> `fetch("http://localhost:4000/todos/:id", {`\
 > `method: "DELETE"`\
 > `});`
